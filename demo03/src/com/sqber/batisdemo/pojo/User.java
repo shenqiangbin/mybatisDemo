@@ -12,21 +12,5 @@ public class User {
 			+" userCode:"+userCode
 			+" userName:"+userName
 			+" status:"+status;
-	}	
-	
-	public int getId() {
-		return this.userId;
-	}
-	
-	public void setId(int userId) {
-		this.userId = userId;
-	}
-	
-	public void setUserCode(String userCode){
-		this.userCode = userCode;
-	}
-	
-	public void setUserName(String userName) {
-		this.userName = userName;
 	}
 }

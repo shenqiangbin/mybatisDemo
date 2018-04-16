@@ -10,13 +10,4 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	<select id='selectByName' parameterType="String" resultType="com.sqber.batisdemo.pojo.User">
 		select * from user where username like '%${value}%'
 	</select>
-	<insert id='insertItem' parameterType="com.sqber.batisdemo.pojo.User">
-		insert into user(usercode,username,status) values(#{userCode},#{userName},#{status})
-		<selectKey order="AFTER" resultType="int" keyProperty="userId">
-			select LAST_INSERT_ID()
-		</selectKey>
-	</insert>
-	<update id='updateItem' parameterType="com.sqber.batisdemo.pojo.User">
-		update user set usercode = #{userCode},username = #{userName} where userid = #{userId}
-	</update>
 </mapper>
